@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34E80E5D21E91D2D006BAF8B /* fractal_plotter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 34E80E5B21E91D2D006BAF8B /* fractal_plotter.cpp */; };
+		34E80E6021E9265A006BAF8B /* libfreeimage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 34E80E5F21E9265A006BAF8B /* libfreeimage.a */; };
 		4F3ED20621E8B2B00095CC89 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F3ED20521E8B2B00095CC89 /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +25,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		34E80E5A21E91ACE006BAF8B /* window.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = window.h; sourceTree = "<group>"; };
+		34E80E5B21E91D2D006BAF8B /* fractal_plotter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = fractal_plotter.cpp; sourceTree = "<group>"; };
+		34E80E5C21E91D2D006BAF8B /* fractal_plotter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fractal_plotter.hpp; sourceTree = "<group>"; };
+		34E80E5F21E9265A006BAF8B /* libfreeimage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfreeimage.a; path = ../../Development/Libraries/FreeImage/Dist/libfreeimage.a; sourceTree = "<group>"; };
 		4F3ED20221E8B2B00095CC89 /* mandelbrot */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mandelbrot; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F3ED20521E8B2B00095CC89 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -32,17 +38,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34E80E6021E9265A006BAF8B /* libfreeimage.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34E80E5E21E9265A006BAF8B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				34E80E5F21E9265A006BAF8B /* libfreeimage.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4F3ED1F921E8B2B00095CC89 = {
 			isa = PBXGroup;
 			children = (
 				4F3ED20421E8B2B00095CC89 /* mandelbrot */,
 				4F3ED20321E8B2B00095CC89 /* Products */,
+				34E80E5E21E9265A006BAF8B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +74,9 @@
 			isa = PBXGroup;
 			children = (
 				4F3ED20521E8B2B00095CC89 /* main.cpp */,
+				34E80E5A21E91ACE006BAF8B /* window.h */,
+				34E80E5B21E91D2D006BAF8B /* fractal_plotter.cpp */,
+				34E80E5C21E91D2D006BAF8B /* fractal_plotter.hpp */,
 			);
 			path = mandelbrot;
 			sourceTree = "<group>";
@@ -118,6 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34E80E5D21E91D2D006BAF8B /* fractal_plotter.cpp in Sources */,
 				4F3ED20621E8B2B00095CC89 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,6 +260,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /Users/matthew/Development/Libraries/FreeImage/Dist;
+				LIBRARY_SEARCH_PATHS = /Users/matthew/Development/Libraries/FreeImage/Dist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -248,6 +270,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /Users/matthew/Development/Libraries/FreeImage/Dist;
+				LIBRARY_SEARCH_PATHS = /Users/matthew/Development/Libraries/FreeImage/Dist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
