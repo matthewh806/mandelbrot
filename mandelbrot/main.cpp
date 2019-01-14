@@ -59,7 +59,7 @@ int main(int argc, const char * argv[]) {
     window<int> scr(0, 600, 0, 600);
     
     // complex window:
-    window<double> frac {-2, 2, -2, 2};
+    window<double> frac {-2.2, 1.2, -1.7, 1.7};
     
     draw_fractal(scr, frac, 500);
     
